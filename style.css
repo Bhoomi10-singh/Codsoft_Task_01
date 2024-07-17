@@ -1,0 +1,166 @@
+/****** COMMON CSS ******/
+body {
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif; /* Added quotes around font name */
+	color: #242732;
+	margin: 0; /* Added to reset default margin */
+	padding: 0; /* Added to reset default padding */
+}
+
+.bg-image {
+	background: url('../image/banner.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/****** LOGO, MENU AND ABOUT DETAILS SECTION ******/
+.navbar {
+	padding-top: 35px;
+}
+
+.navbar-brand {
+	font-size: 30px;
+	color: white;
+}
+
+.offcanvas-header {
+	justify-content: flex-end; /* Corrected to flex-end */
+}
+
+.nav-link {
+	color: black;
+}
+
+.info {
+	padding-top: 15px;
+}
+
+.info p {
+	margin: 0; /* Simplified margin reset */
+}
+
+.navbar .info a {
+	font-size: 23px;
+	color: black;
+}
+
+.pb-100 {
+	padding-bottom: 100px;
+}
+
+/********* ABOUT US SECTION  *******/
+.about-detail {
+	padding-top: 35%;
+	padding-bottom: 100px;
+}
+
+.about-detail h5 {
+	font-size: 40px;
+	margin-bottom: 15px;
+	color: white;
+	font-weight: 400;
+}
+
+.about-detail h1 {
+	font-size: 58px;
+	margin-bottom: 10px;
+	color: white;
+	font-weight: bold; /* Corrected 'bolder' to 'bold' */
+}
+
+.about-detail p {
+	font-size: 22px;
+	color: white;
+	line-height: 28px;
+}
+
+.about-detail button {
+	border: none;
+	padding: 15px 40px;
+	margin-top: 15px;
+	color: white;
+	background: #ef6735;
+	cursor: pointer; /* Added cursor pointer */
+}
+
+.about-detail button i {
+	font-size: 15px;
+	margin-left: 5px;
+}
+
+.typing {
+	position: relative;
+	display: inline-block; /* Added display inline-block for width containment */
+	padding-right: 20px;
+}
+
+.typing::after {
+	content: "|";
+	position: absolute;
+	right: 0;
+	background: #212121;
+	animation: typing-animation 6s steps(22) infinite, caret-animation 1s infinite; /* Renamed keyframes */
+}
+
+@keyframes typing-animation { /* Renamed keyframes */
+	to {
+		width: 0;
+	}
+}
+
+@keyframes caret-animation { /* Renamed keyframes */
+	50% {
+		color: transparent;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.about-detail h5 {
+		font-size: 25px;
+	}
+	.about-detail h1 {
+		font-size: 38px; /* Removed !important */
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.about-detail {
+		padding-top: 15%;
+		padding-bottom: 60px;
+	}
+	.about-detail h5 {
+		font-size: 20px;
+	}
+	.about-detail h1 {
+		font-size: 35px; /* Removed !important */
+		margin-bottom: 5px; /* Removed !important */
+	}
+}
+
+.banner-img {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+.banner-img img {
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+	.banner-img {
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.banner-img {
+		height: auto;
+	}
+	.banner-img img {
+		position: relative;
+		width: 100%; /* Corrected width */
+	}
+}
